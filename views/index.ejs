@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Survey Form</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
+  </head>
+
+  <body>
+    <form action="/result" method="POST">
+        <label>Your Name: 
+          <input name="name" type="text">
+        </label>
+
+        <label>Dojo Location:
+          <select name="location">
+            <% for(var item in data.locations){ %>
+              <option value=<%= data.locations[item].name %>> <%= data.locations[item].name %> </option>
+            <% } %>
+          </select> 
+        </label>
+        
+        <label>Favorite Language:
+          <select name="language">
+            <% for(var item in data.languages){ %>
+              <option value=<%= data.languages[item].name %>> <%= data.languages[item].name %> </option>
+            <% } %>
+          </select>
+        </label>
+
+        <label>Comment (optional):
+            <textarea name="comment"></textarea>
+        </label>
+
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>

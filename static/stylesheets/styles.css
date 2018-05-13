@@ -1,0 +1,11 @@
+label{
+  display: block;
+  margin-bottom: 15px;
+}
+
+form{
+  border: solid;
+  border-color: black;
+  padding: 15px;
+  width: 25rem;
+}
